@@ -17,7 +17,7 @@ ESP32QRCodeReader::ESP32QRCodeReader(CameraPins pins) : ESP32QRCodeReader(pins, 
 
 ESP32QRCodeReader::ESP32QRCodeReader(CameraPins pins, framesize_t frameSize) : pins(pins), frameSize(frameSize)
 {
-  qrCodeQueue = xQueueCreate(10, sizeof(struct QRCodeData));
+  qrCodeQueue = xQueueCreate(1, sizeof(struct QRCodeData));
 }
 
 ESP32QRCodeReader::~ESP32QRCodeReader()
